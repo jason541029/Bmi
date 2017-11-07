@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bmi</string>
+    <string name="Your_BMI_is">Your BMI is</string>
+    <string name="bmi_title">my title</string>
+    <string name="OK">OK</string>
+    <string name="weight">weight</string>
+    <string name="info">info</string>
+    <string name="calculate_bmi">calculate bmi</string>
+    <string name="height">height</string>
 </resources>
