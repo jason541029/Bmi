@@ -7,13 +7,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String s = new String("abc");
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            new AlertDialog.Builder(MainActivity.this)
+            .setTitle("bmi是一種計算的東西")
+            .setMessage("體重/身高平方")
+                    .setPositiveButton("OK",null)
+                    .show();
 
         }
     };
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void bmi(View view) {
         Log.d("MainActivity","testing bmi method");
-        EditText edHeight = (EditText) findViewById(R.id.ed_height);
+        EditText edHeight = (EditText) findViewById(R.id.height);
         EditText edWeight = (EditText) findViewById(R.id.ed_weight);
         float weight = Float.parseFloat(edWeight.getText().toString());
         float height = Float.parseFloat(edHeight.getText().toString());
