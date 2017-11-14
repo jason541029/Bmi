@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.EditText;import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String s = new String("abc");
@@ -44,9 +44,28 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage(getString(R.string.bmi_title))
                 .setPositiveButton(R.string.OK, null)
                 .show();
+        TextView dia = (TextView)findViewById(R.id.b_bmi);// 取得 顯示診斷 物件
+
+        if (bmi<20)
+            dia.setText("請多吃點");
+        else if (20<= bmi && bmi< 24)
+            dia.setText("正常範圍");
+        else if (24 <=bmi && bmi < 27)
+            dia.setText("過    重");
+        else if (27 <=bmi && bmi < 30)
+            dia.setText("輕度肥胖");
+        else if (30 <= bmi && bmi < 35)
+            dia.setText("中度肥胖");
+
+
+    }
+
+
 //        Log.d("MainActivity","You BMI is:"+bmi);
 //        Toast.makeText(this,
 //                "You BMI is:"+bmi,ToastLENGTH_SHORT).show();
+
+
 
     }
 }
