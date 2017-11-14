@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         else if (30 <= bmi && bmi < 35)
             dia.setText("中度肥胖");
 
-
+        if (height>3)
+            dia.setText("身高單位應為公尺");
     }
 
 
